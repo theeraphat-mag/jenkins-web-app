@@ -23,6 +23,9 @@ pipeline {
             steps {
                 script {
                     sh "docker build -t ${APP_NAME}:${IMAGE_TAG} -t ${APP_NAME}:latest ."
+
+                    sh "minikube image load ${APP_NAME}:${IMAGE_TAG}"
+                    sh "minikube image load ${APP_NAME}:latest"
                 }
             }
         }
