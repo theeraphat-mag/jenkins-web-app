@@ -104,7 +104,7 @@ pipeline {
     }
     post {
         success {
-            echo "Deployment successful!"
+            echo "Deployment successful! Access at http://10.138.238.220"
         }
         failure {
             echo "Deployment failed!"
