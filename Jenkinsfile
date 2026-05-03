@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        kubernetes {
-            label 'kaniko-agent'
-        }
+            label 'k8s-agent-1'
     }
     triggers {
         githubPush()
